@@ -1,10 +1,10 @@
 import './App.css';
-import EventHandler from './test';
+import Parent from './parent';
 
 function App() {
   return (
     <>
-      <EventHandler />
+      <Parent />
     </>
   );
 }
