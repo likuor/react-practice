@@ -13,12 +13,18 @@ const Other = () => {
   const [todosData, setTodosData] = useState<TodoType[] | null>(null);
 
   const fetchApi = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/todos');
-    const data = await res.json();
-    // setIsVisible((prev) => !prev);
-    // setIsVisible((prev) => !prev);
-    // setIsVisible((prev) => !prev);
-    setTodosData(data);
+    const res = fetch('https://jsonplaceholder.typicode.com/todos');
+    const res2 = fetch('https://jsonplaceholder.typicode.com/todos');
+
+    try {
+      const [promise, promise2] = await Promise.all([res, res2]);
+      const data = await promise.json();
+      const data2 = await promise2.json();
+      console.log(data, data2);
+      setTodosData(data);
+    } catch (error) {
+      console.error('Error occurred:', error);
+    }
   };
 
   return (

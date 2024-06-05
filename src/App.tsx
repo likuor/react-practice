@@ -1,10 +1,12 @@
 import './App.css';
-import Parent from './parent';
+// import Parent from './parent';
+import Other from './test';
 
 function App() {
   return (
     <>
-      <Parent />
+      <Other />
+      {/* <Parent /> */}
     </>
   );
 }
