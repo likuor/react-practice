@@ -1,12 +1,12 @@
 import './App.css';
-// import Parent from './parent';
-import Other from './test';
+import Parent from './parent';
+// import Other from './test';
 
 function App() {
   return (
     <>
-      <Other />
-      {/* <Parent /> */}
+      {/* <Other /> */}
+      <Parent />
     </>
   );
 }
